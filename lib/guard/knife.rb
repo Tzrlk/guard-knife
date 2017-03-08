@@ -1,14 +1,13 @@
 require 'guard'
-require 'guard/guard'
+require 'guard/plugin'
 
 module Guard
-  class Knife < Guard
-    VERSION = '0.1.2'
+  class Knife < Plugin
+    VERSION = '0.1.3'
 
     # Initialize a Guard.
-    # @param [Array<Guard::Watcher>] watchers the Guard file watchers
     # @param [Hash] options the custom Guard options
-    def initialize(watchers = [], options = {})
+    def initialize(options = {})
       super
       @options = {}.update(options)
     end
